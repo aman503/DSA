@@ -1,0 +1,38 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int a[7];
+    for(int i =0;i<7;i++)
+    {
+        cin>>a[i];
+    }
+    int e;
+    //enten the u want to find;
+    cin>>e;
+    int l,h=0;
+    l=0;
+    h=6;
+    
+   while(l<=h)
+    {
+        
+      int mid=(l+h)/2;
+      cout<<"mid is ="<<mid<<endl;
+       if(a[mid]==e)
+       {
+           cout<<mid;
+           break;
+       }
+       if(a[mid]<e)
+       {
+          l=mid+1;
+          cout<<"l is ="<<l<<endl;
+       }
+       else 
+       {
+           h=mid-1;
+           cout<<"h is ="<<h<<endl;
+       }
+    }
+}
