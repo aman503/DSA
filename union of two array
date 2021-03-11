@@ -1,0 +1,51 @@
+#include<iostream>
+using namespace std;
+int main()
+{
+    int n,m;
+    cin>>n>>m;
+    int ar1[n];
+    int ar2[m];
+    for(int i=0;i<n;i++)
+    {
+        cin>>ar1[i];
+    }
+     for(int i=0;i<m;i++)
+    {
+        cin>>ar2[i];
+    }
+    int p=0;
+    p=m+n;
+    int ar3[p-1];
+    for(int i=0;i<n;i++)
+    {
+     ar3[i]=ar1[i];
+     
+    }
+    int j=n;
+    int t=0;
+    int count=0;
+  
+        for(t=0;t<m;t++)
+        {
+            count=0;
+            for(int s=0;s<n;s++)
+            {
+                
+                if(ar1[s]==ar2[t])
+                {
+                    count++;
+                }
+            }
+            if(count==0)
+            {
+                ar3[j]=ar2[t];
+                j++;
+            }
+        }
+    
+    for(int h=0;h<j;h++)
+    {
+        cout<<ar3[h];
+    }
+}
